@@ -6,7 +6,7 @@ function App() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    let amount=parseInt(count);
+    let amount=parseInt(count); //because count is a string
     if(count<=0){
       amount=1;
     }
@@ -23,7 +23,7 @@ function App() {
       <label htmlFor="amount">
         Paragraphs:
       </label>
-      <input type="numer" name="amount" id="amount" value={count} onChange={(e)=>{setCount(e.target.value)}} />
+      <input type="number" name="amount" id="amount" value={count} onChange={(e)=>{setCount(e.target.value)}} />
       <button className="btn" type="submit">Generate</button>
     </form>
     <article className="lorem-text">
